@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/kojokobi/udacity-microservice-k8.svg?style=svg)](https://circleci.com/gh/kojokobi/udacity-microservice-k8)
 
 ## Project Overview
 
