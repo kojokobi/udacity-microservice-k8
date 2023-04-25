@@ -1,0 +1,7 @@
+NAME                                 READY   STATUS    RESTARTS      AGE
+app-54994fd854-mj66f                 1/1     Running   0             12m
+mongo-deployment-64f98d85bd-4f4v8    1/1     Running   0             248d
+webapp-deployment-649d7fb885-2qcpd   1/1     Running   4 (54m ago)   248d
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
