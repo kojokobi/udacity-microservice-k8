@@ -1,7 +1,38 @@
-NAME                                 READY   STATUS    RESTARTS      AGE
-app-54994fd854-mj66f                 1/1     Running   0             12m
-mongo-deployment-64f98d85bd-4f4v8    1/1     Running   0             248d
-webapp-deployment-649d7fb885-2qcpd   1/1     Running   4 (54m ago)   248d
+NAME                   READY   STATUS    RESTARTS   AGE
+app-58bb56875c-kvfdh   1/1     Running   0          17m
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
+Handling connection for 8000
+
+
+ project-ml-microservice-kubernetes git:(main) ✗ kubectl logs app-58bb56875c-kvfdh
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 338-947-608
+[2023-04-26 08:21:33,566] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2023-04-26 08:21:33,778] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-04-26 08:21:33,793] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-04-26 08:21:33,876] INFO in app: --Output  Prediction--: [20.35373177134412]
+127.0.0.1 - - [26/Apr/2023 08:21:33] "POST /predict HTTP/1.1" 200 -
+[2023-04-26 08:25:13,867] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2023-04-26 08:25:13,982] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-04-26 08:25:13,993] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2023-04-26 08:25:14,024] INFO in app: --Output  Prediction--: [20.35373177134412]
+127.0.0.1 - - [26/Apr/2023 08:25:14] "POST /predict HTTP/1.1" 200 -
